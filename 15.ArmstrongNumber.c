@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() 
+{
+    int num, original, remainder, result = 0;
+    printf("Enter a 3-digit number: ");
+    scanf("%d", &num);
+    original = num;
+    while (num != 0) {
+        remainder = num % 10;
+        result += remainder * remainder * remainder;
+        num /= 10;
+    }
+    if (result == original)
+        printf("Armstrong Number\n");
+    else
+        printf("Not an Armstrong Number\n");
+    return 0;
+}
